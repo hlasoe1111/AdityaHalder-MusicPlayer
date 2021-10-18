@@ -1,0 +1,79 @@
+{
+    "name": "Music Player",
+    "logo": "https://telegra.ph/file/abbba622b483d56d79688.png",
+    "description": "An Advanced Superfast Vc Music Player for Telegram Group ...",
+    "keywords": ["music", "voice chat", "telegram"],
+    "repository": "https://github.com/AdityaHalder/MusicPlayer",
+    "stack": "container",
+    "env": {
+        "API_ID": {
+            "description": "APP ID from my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "API HASH from my.telegram.org",
+            "required": true
+        },
+        "ASSISTANT_USERNAME": {
+            "description": "Fill with your assistant username without @",
+            "required": true,
+            "value": "alexavc"
+        },
+        "OWNER_USERNAME": {
+            "description": "Fill With your (Bot Owner) username without @",
+            "required": true,
+            "value": "AdityaHalder"
+        },
+        "BOT_USERNAME": {
+            "description": "Fill with your bot username without @",
+            "required": true,
+            "value": "alexavcbot"
+        },
+        "BOT_TOKEN": {
+            "description": "Your bot token from @BotFather",
+            "required": true
+        },
+        "BG_IMAGE": {
+            "description": "For background image if you playing",
+            "required": true,
+            "value": "https://telegra.ph/file/0f6f8a8a5ad69fe5ecf3d.png"
+        },
+        "BOT_IMAGE": {
+            "description": "For Private When Giving /start Command to Bot",
+            "required": true,
+            "value": "https://te.legra.ph/file/667cb388d717911046a16.png"
+        },
+        "DURATION_LIMIT": {
+            "description": "Duration limit for your musicplayer (in minutes).",
+            "required": true,
+            "value": "10"
+        },
+        "SESSION_NAME": {
+            "description": "Pyrogram String Session ...",
+            "required": true
+        },
+        
+        "UPDATES_CHANNEL": {
+            "description": "Fill with your channel username without @, if you haven't one you can leave it default",
+            "required": false,
+            "value": "adityaserver"
+        },
+        "SUPPORT_GROUP": {
+            "description": "Fill with your group username without @, if your haven't one you can leave it default",
+            "required": false,
+            "value": "adityaworldx"
+        },
+        "SUDO_USERS": {
+            "description": "Fill with ID who you made a admin for bot (separate with space).",
+            "required": true
+        }
+    },
+    "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
